@@ -5,17 +5,18 @@ layout: default
 
 <div class="row">
 
-  <div id="post-wrapper" class="col-12 col-lg-11 col-xl-8">
+  <div id="post-wrapper" class="col-12 col-lg-11 col-xl-8"  style="direction: rtl; text-align: right;">
 
     <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
-      <h1 data-toc-skip>{{ page.title }}</h1>
+      <h1 data-toc-skip style="direction: rtl; text-align: right;">{{ page.title }}</h1>
 
       <div class="post-meta text-muted d-flex flex-column">
         <!-- Published date and author -->
         <div>
+          در تاریخ
           {% include timeago.html date=page.date tooltip=true %}
-          by
+          توسط
           <span class="author">
             {{ page.author | default: site.author }}
           </span>
@@ -25,7 +26,7 @@ layout: default
           <!-- lastmod -->
           {% if page.last_modified_at %}
           <span>
-            Updated
+            بروز شده در
             {% include timeago.html date=page.last_modified_at class="lastmod" tooltip=true %}
           </span>
           {% endif %}
@@ -82,9 +83,9 @@ layout: default
           d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
           {% if site.data.rights.license %}
           <div class="license-wrapper">
-            This post is licensed under
+            این پست تحت مجوز
             <a href="{{ site.data.rights.license.link }}">{{ site.data.rights.license.name }}</a>
-            by the author.
+            منتشر شده است.
           </div>
           {% endif %}
 

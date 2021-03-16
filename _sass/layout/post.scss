@@ -31,11 +31,11 @@
   }
 
   #pv::after {
-    content: " views";
+    content: " مشاهده";
   }
 
-  .readtime::after {
-    content: " read";
+  .readtime::before {
+    content: " خواندن";
   }
 }
 

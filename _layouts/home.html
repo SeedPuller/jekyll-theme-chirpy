@@ -44,7 +44,7 @@ layout: page
 
 {% for post in posts %}
 
-  <div class="post-preview">
+  <div class="post-preview" style="direction: rtl; text-align: right;">
     <h1>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </h1>
@@ -61,10 +61,12 @@ layout: page
       <div>
         <!-- posted date -->
         <i class="far fa-calendar fa-fw"></i>
+        <!-- &lrm; -->
         {% include timeago.html date=post.date tooltip=true %}
-
+        <!-- &lrm; -->
+        &rlm; 
         <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
+        <i class="far fa-clock fa-fw" style="direction: ltr; text-align: left;"></i>
         {% include read-time.html content=post.content %}
 
         <!-- page views -->
