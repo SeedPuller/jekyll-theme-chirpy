@@ -28,6 +28,16 @@
   %}
 {% endif %}
 
+<!-- Fix the text direction inside the inline-codes -->
+{% if _content contains '<code class=' %}
+  {% assign _content = _content
+    | replace: '<code class="language-plaintext highlighter-rouge">', '<span dir="ltr"><code class="language-plaintext highlighter-rouge">&lrm;'
+    | replace: '</code>', '</code></span>&rlm; '
+
+  %}
+{% endif %}
+
+
 <!-- Add attribute 'hide-bullet' to the checkbox list -->
 {% if _content contains '<li class="task-list-item"><' %}
   {% assign _content = _content
