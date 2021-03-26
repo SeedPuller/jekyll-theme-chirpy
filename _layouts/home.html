@@ -61,12 +61,12 @@ layout: page
       <div>
         <!-- posted date -->
         <i class="far fa-calendar fa-fw"></i>
+        &rlm;
         <!-- &lrm; -->
-        {% include timeago.html date=post.date tooltip=true %}
-        <!-- &lrm; -->
-        &rlm; 
+        <span style="margin-right: -0.1rem;">{% include timeago.html date=post.date tooltip=true %}</span>
+
         <!-- time to read -->
-        <i class="far fa-clock fa-fw" style="direction: ltr; text-align: left;"></i>
+        <i class="far fa-clock fa-fw"></i>
         {% include read-time.html content=post.content %}
 
         <!-- page views -->
