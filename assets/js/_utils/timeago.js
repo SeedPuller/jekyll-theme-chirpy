@@ -26,6 +26,7 @@ $(function() {
     if (past.getMonth() !== now.getMonth()) {
       toRefresh -= 1;
       return past.toLocaleString("fa-IR", {
+        year:"numeric",
         month: "short",
         day: "numeric"
       });
